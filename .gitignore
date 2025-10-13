@@ -1,7 +1,15 @@
-# Compiled class file
+
+---
+
+## ⚙️ **.gitignore para proyectos Java (IntelliJ IDEA)**
+
+Este `.gitignore` cubre entornos comunes de desarrollo con IntelliJ, Maven y Gradle, evitando que se suban archivos temporales, configuraciones locales o binarios compilados.
+
+```gitignore
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
 
 # BlueJ files
@@ -19,6 +27,35 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+target/
+
+# Eclipse (por compatibilidad cruzada)
+.project
+.classpath
+.settings/
+bin/
+
+# Java crash logs
 hs_err_pid*
-replay_pid*
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+
+# OS-specific files
+Thumbs.db
