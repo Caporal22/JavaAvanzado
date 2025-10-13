@@ -1,7 +1,7 @@
 
 ---
 
-## ⚙️ **.gitignore para proyectos Java (IntelliJ IDEA)**
+## **.gitignore para proyectos Java (IntelliJ IDEA)**
 
 Este `.gitignore` cubre entornos comunes de desarrollo con IntelliJ, Maven y Gradle, evitando que se suban archivos temporales, configuraciones locales o binarios compilados.
 
