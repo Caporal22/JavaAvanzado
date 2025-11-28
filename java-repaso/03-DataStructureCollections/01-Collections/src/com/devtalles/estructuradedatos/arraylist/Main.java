@@ -1,4 +1,4 @@
-package com.devtalles.estructuradedatos.list.arraylist;
+package com.devtalles.estructuradedatos.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;
