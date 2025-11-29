@@ -1,4 +1,4 @@
-package com.devtalles.estructuradedatos.linkedlist;
+package com.devtalles.estructuradedatos.list.linkedlist.linkedlist;
 
 import java.util.LinkedList;
 import java.util.List;
