@@ -1,4 +1,4 @@
-package introducction;
+package introduction;
 
 class InvalidAgeException extends RuntimeException {
     public InvalidAgeException(String message) {
