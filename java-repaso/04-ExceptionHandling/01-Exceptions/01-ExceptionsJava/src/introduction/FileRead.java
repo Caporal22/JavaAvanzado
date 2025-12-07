@@ -35,7 +35,8 @@ public class FileRead {
     private static void processFile(String path) {
         // Validación antes de intentar leer
         if (path == null || path.isBlank()) {
-            throw new FileProcessingException("La ruta del archivo está vacía o es inválida", null);
+            throw new FileProcessingException("La r" +
+                    "uta del archivo está vacía o es inválida", null);
         }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
