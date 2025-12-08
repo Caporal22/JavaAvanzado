@@ -1,0 +1,2 @@
+This is the second .txt example
+We will use this file for testing, so if you wanna change something for your development, dont worry, this no make a exception.
