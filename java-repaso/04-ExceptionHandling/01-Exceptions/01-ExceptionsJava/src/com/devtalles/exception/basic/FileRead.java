@@ -1,4 +1,4 @@
-package introduction;
+package com.devtalles.exception.basic;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -22,7 +22,7 @@ public class FileRead {
 
         try {
             processFile(path);
-            LOGGER.info("Lectura finalizada con éxito ✔");
+            LOGGER.info("Lectura finalizada con éxito ");
         } catch (FileProcessingException ex) {
             LOGGER.log(Level.SEVERE, "No se pudo procesar el archivo", ex);
         }

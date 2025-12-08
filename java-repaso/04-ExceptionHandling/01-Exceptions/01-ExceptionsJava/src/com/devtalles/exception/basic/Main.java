@@ -1,4 +1,4 @@
-package introduction;
+package com.devtalles.exception.basic;
 
 class InvalidAgeException extends RuntimeException {
     public InvalidAgeException(String message) {

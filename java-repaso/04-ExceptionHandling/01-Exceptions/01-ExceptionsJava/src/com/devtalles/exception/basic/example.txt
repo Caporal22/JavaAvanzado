@@ -1,0 +1,2 @@
+Este es un documento de prueba, para el funcionamiento de las exepciones en Java
+Hola soy Daniel, y estoy haciendo unos ejemplos de exepciones con archivos

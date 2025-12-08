@@ -1,4 +1,4 @@
-package introduction;
+package com.devtalles.exception.basic;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
