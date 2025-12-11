@@ -11,11 +11,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/**
- * Demonstrates how to generate JSON files using Gson and Jackson.
- * Both examples are production-level: formatted output, error handling,
- * and safe file creation with directory check.
- */
 public class JsonGenerationExample {
 
     public static void main(String[] args) {
@@ -59,7 +54,6 @@ public class JsonGenerationExample {
     }
 
 
-    /* Utility: create directory if it does not exist */
     private static void createDir(String directory) {
         try {
             Path path = Path.of(directory);
@@ -73,12 +67,7 @@ public class JsonGenerationExample {
 }
 
 
-/* ===================== DATA MODELS ===================== */
 
-/**
- * POJO compatible with both Gson and Jackson.
- * Contains a no-arg constructor and public getters.
- */
 class Employee {
     private String id;
     private String name;
