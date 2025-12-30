@@ -5,8 +5,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ExampleIterators {
+
     public static void main(String[] args) {
-        List<String> names = new ArrayList<>();
+
+        final List<String> names = new ArrayList<>();
 
         names.add("Daniel");
         names.add("Juan");
@@ -20,14 +22,15 @@ public class ExampleIterators {
 //        }
 
         Iterator<String> iterator = names.iterator();
+
         while (iterator.hasNext()) {
             String name = iterator.next();
-            if(name.startsWith("D")) {
-                iterator.remove();
+
+            if (name.startsWith("D")) {
+                iterator.remove(); // forma correcta de eliminar mientras iteras
             }
         }
 
-        System.out.println(names);
-
+        System.out.println("Resultado final: " + names);
     }
 }
