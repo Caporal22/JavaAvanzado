@@ -72,10 +72,19 @@ public class TaskView {
         }
     }
 
-    public void deleteTaskView(){
-        this.taskController.removeTask();
-        try{
-            System.out.println("Enter an id: ");
+    public void removeTaskView() {
+        try {
+            System.out.println("Enter an id to remove: ");
+            String id = scanner.nextLine();
+            this.taskController.removeTask(id);
+            System.out.println("Task has been removed successfully!");
+        } catch (TaskValidationException | TaskException e) {
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            throw new RuntimeException(e);
         }
+
+
     }
 }
