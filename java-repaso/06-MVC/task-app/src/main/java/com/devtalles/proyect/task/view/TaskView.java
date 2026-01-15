@@ -24,7 +24,10 @@ public class TaskView {
             System.out.println("2. Delete Task");
             System.out.println("3. Update Task");
             System.out.println("4. Show Tasks");
-            System.out.println("5. Exit");
+            System.out.println("5. Update task status");
+            System.out.println("6. Show Completed Tasks");
+            System.out.println("7. Show Pending Tasks");
+            System.out.println("8. Exit");
             System.out.println("Select an option");
 
             String option = scanner.nextLine();
@@ -32,19 +35,35 @@ public class TaskView {
                 case "1":
                     addTaskView();
                     break;
+
                 case "2":
                     removeTaskView();
                     break;
+
                 case "3":
                     updateTaskView();
                     break;
+
                 case "4":
                     showTaskView();
                     break;
+
                 case "5":
+                    updateTaskCompletedView();
+                    break;
+
+                case "6":
+                    showCompletedTasks();
+                    break;
+
+                case "7":
+                    showPendingTasks();
+                    break;
+
+                case "8":
                     System.out.println("Exit...");
                     return;
-                    default:
+                default:
                         System.out.println("Invalid option, try again");
             }
 
@@ -81,7 +100,7 @@ public class TaskView {
     public void showTaskView(){
         try {
             System.out.println("\nTask Management System: ");
-            this.taskController.showsTasks();
+            this.taskController.showTasks();
         } catch (TaskValidationException | TaskException e) {
             System.out.println("Error: " + e.getMessage());
         } catch (Exception e) {
@@ -100,6 +119,51 @@ public class TaskView {
         } catch (Exception e){
             System.out.println("Error: " + e.getMessage());
             e.printStackTrace();
+        }
+    }
+
+    public void updateTaskCompletedView() {
+        try{
+            System.out.println("Enter an id to update: ");
+            String id = scanner.nextLine();
+            Boolean completed = null;
+            while(completed == null){
+                System.out.println("Enter completed:");
+                String input = scanner.nextLine().trim().toLowerCase();
+                if(input.equals("true")){
+                    completed = true;
+                }else if(input.equals("false")){
+                    completed = false;
+                } else {
+                    System.out.println("Invalid input... is empty! (true/false)");
+                }
+            }
+
+            taskController.updateTaskComplete(id, completed);
+            System.out.println("Status has been update successfully!");
+        } catch (TaskValidationException | TaskException e){
+            System.out.println("Error: " + e.getMessage());
+        } catch (Exception e){
+            System.out.println("Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void showCompletedTasks(){
+        try{
+            System.out.println("Tasks completed successfully: ");
+            taskController.showCompletedTasks();
+        } catch (TaskValidationException | TaskException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    public void showPendingTasks(){
+        try{
+            System.out.println("Task pending : ");
+            taskController.showPendingTasks();
+        } catch (TaskValidationException | TaskException e){
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
