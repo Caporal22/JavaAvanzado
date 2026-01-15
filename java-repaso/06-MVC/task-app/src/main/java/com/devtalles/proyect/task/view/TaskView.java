@@ -113,14 +113,37 @@ public class TaskView {
             }
         } while (id.isEmpty());
 
-        System.out.println("Enter title:");
-        String title = scanner.nextLine();
+        String title;
+        do {
+            System.out.println("Enter title:");
+            title = scanner.nextLine();
+            if(title.isEmpty()){
+                System.out.println("Invalid title... is empty!");
+            }
+        } while (title.isEmpty());
 
-        System.out.println("Enter description:");
-        String description = scanner.nextLine();
 
-        System.out.println("Is the task complete? true/false");
-        Boolean completed = Boolean.parseBoolean(scanner.nextLine());
+        String description;
+        do {
+            System.out.println("Enter description:");
+            description = scanner.nextLine();
+            if(description.isEmpty()){
+                System.out.println("Invalid description... is empty!");
+            }
+        } while (description.isEmpty());
+
+        Boolean completed = null;
+        while(completed == null){
+            System.out.println("Enter completed:");
+            String input = scanner.nextLine().trim().toLowerCase();
+            if(input.equals("true")){
+                completed = true;
+            }else if(input.equals("false")){
+                completed = false;
+            } else {
+                System.out.println("Invalid input... is empty! (true/false)");
+            }
+        }
 
         return new Task(id, title, description, completed);
     }

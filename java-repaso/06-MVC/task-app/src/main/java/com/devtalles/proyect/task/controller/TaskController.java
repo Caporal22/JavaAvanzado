@@ -59,9 +59,9 @@ public class TaskController {
             throw new TaskValidationException("Task description cannot be empty");
         }
 
-        if(completed==null || completed.booleanValue()){
-            throw new TaskValidationException("Task completed cannot be empty");
-        }
+//        if(completed==null || completed.booleanValue()){
+//            throw new TaskValidationException("Task completed cannot be empty");
+//        }
 
     }
 
