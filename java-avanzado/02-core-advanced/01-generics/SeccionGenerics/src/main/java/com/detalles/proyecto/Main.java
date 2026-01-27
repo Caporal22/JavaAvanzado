@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println(stringBox.getValue());
 
-        Box<Integer> integerBox = new Box<>(22);
+        com.detalles.proyecto.Box<Integer> integerBox = new com.detalles.proyecto.Box<>(22);
         System.out.println(integerBox.getValue());
     }
 }
