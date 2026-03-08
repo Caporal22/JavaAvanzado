@@ -1,13 +1,19 @@
+
 package com.detalles.generics;
 
 public class Main {
-    static void main() {
 
-        Object number = Integer.valueOf(10);
-        number = "Hola";
+    public static void main(String[] args) {
 
-        Hola me llamo daniel y quier
+        Printer<Integer> intPrinter = new Printer<>(10);
+        Printer<String> stringPrinter = new Printer<>("Daniel");
 
+        intPrinter.print();
+        stringPrinter.print();
+
+        UppercasePrinter<String> upperPrinter =
+                new UppercasePrinter<>("java generics are powerful");
+
+        upperPrinter.printUppercase();
     }
-
 }
